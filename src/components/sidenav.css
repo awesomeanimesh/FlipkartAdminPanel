@@ -1,0 +1,18 @@
+.sidenavData {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.subtitle {
+    /* font-family: 'Open Sans'; */
+    font-weight: 400;
+    /* font-size: 12px; */
+    color: #5F6368;
+    font: normal normal normal 12px/18px Open Sans;
+}
