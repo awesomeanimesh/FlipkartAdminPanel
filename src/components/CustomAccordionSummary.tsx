@@ -19,7 +19,6 @@ function CustomAccordionSummary(props: CustomAccordionSummaryProps) {
       }
       aria-controls="panel1a-content"
       id="panel1a-header"
-      // sx={{ borderBottom: "1px solid #005BA6" }}
     >
       <Stack
         mr={2}
@@ -30,9 +29,7 @@ function CustomAccordionSummary(props: CustomAccordionSummaryProps) {
           justifyContent: "space-between",
         }}
       >
-        <Stack
-        // sx={{ borderBottom: "1px solid #005BA6" }}
-        >
+        <Stack>
           <div className="title">{title}</div>
           <div className="subtitle">{subtitle}</div>
         </Stack>

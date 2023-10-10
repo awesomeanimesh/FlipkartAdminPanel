@@ -143,14 +143,13 @@ function OrgSetupDetails() {
                 </Typography>
                 <TextField
                   hiddenLabel
-                  //   size="medium"
                   fullWidth
                   placeholder="Enter Org ID"
                   id="filled-hidden-label-normal"
                   defaultValue=""
                   InputProps={{
                     classes: {
-                      input: "texfeildrounded", // Add a CSS class to the input element
+                      input: "texfeildrounded",
                     },
                     sx: {
                       BoxStyle1,
@@ -178,14 +177,13 @@ function OrgSetupDetails() {
                 </Typography>
                 <TextField
                   hiddenLabel
-                  //   size="medium"
                   fullWidth
                   placeholder="Enter City Name"
                   id="filled-hidden-label-normal"
                   defaultValue=""
                   InputProps={{
                     classes: {
-                      input: "texfeildrounded", // Add a CSS class to the input element
+                      input: "texfeildrounded",
                     },
                     sx: {
                       BoxStyle1,
@@ -194,8 +192,6 @@ function OrgSetupDetails() {
                   }}
                   {...register("cityName", {
                     required: true,
-                    // pattern:
-                    //   /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
                   })}
                 />
                 {errors.cityName?.type === "pattern" && (
@@ -214,14 +210,13 @@ function OrgSetupDetails() {
                 </Typography>
                 <TextField
                   hiddenLabel
-                  //   size="medium"
                   fullWidth
                   placeholder="Enter Org Name"
                   id="filled-hidden-label-normal"
                   defaultValue=""
                   InputProps={{
                     classes: {
-                      input: "texfeildrounded", // Add a CSS class to the input element
+                      input: "texfeildrounded",
                     },
                     sx: {
                       BoxStyle1,
@@ -230,8 +225,6 @@ function OrgSetupDetails() {
                   }}
                   {...register("orgName", {
                     required: true,
-                    // pattern:
-                    //   /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
                   })}
                 />
                 {errors.orgName?.type === "pattern" && (
@@ -250,14 +243,13 @@ function OrgSetupDetails() {
                 </Typography>
                 <TextField
                   hiddenLabel
-                  //   size="medium"
                   fullWidth
                   placeholder="Enter Team Name"
                   id="filled-hidden-label-normal"
                   defaultValue=""
                   InputProps={{
                     classes: {
-                      input: "texfeildrounded", // Add a CSS class to the input element
+                      input: "texfeildrounded",
                     },
                     sx: {
                       BoxStyle1,
@@ -266,8 +258,6 @@ function OrgSetupDetails() {
                   }}
                   {...register("teamName", {
                     required: true,
-                    // pattern:
-                    //   /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
                   })}
                 />
                 {errors.teamName?.type === "pattern" && (
@@ -354,14 +344,13 @@ function OrgSetupDetails() {
                 </Typography>
                 <TextField
                   hiddenLabel
-                  //   size="medium"
                   fullWidth
                   placeholder="Enter Team Count"
                   id="filled-hidden-label-normal"
                   defaultValue=""
                   InputProps={{
                     classes: {
-                      input: "texfeildrounded", // Add a CSS class to the input element
+                      input: "texfeildrounded",
                     },
                     sx: {
                       BoxStyle1,
@@ -370,8 +359,6 @@ function OrgSetupDetails() {
                   }}
                   {...register("teamCount", {
                     required: true,
-                    // pattern:
-                    //   /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
                   })}
                 />
                 {errors.teamCount?.type === "pattern" && (
@@ -724,7 +711,6 @@ function OrgSetupDetails() {
               </FormControl>
             </Grid>
           </Grid>
-          {/* Add a submit button here if needed */}
         </form>
       </Stack>
     </div>

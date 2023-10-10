@@ -5,13 +5,11 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
+
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -21,20 +19,16 @@ import About from "../pages/About";
 import Menu from "@mui/material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
+
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+
 import "./sidenav.css";
 import { Stack } from "@mui/material";
 
 const drawerWidth = 240;
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
 }
 
@@ -99,7 +93,6 @@ export default function Sidenav(props: Props) {
                   cursor: "pointer",
                 }}
               >
-                {/* <ListItemIcon> */}
                 <div style={{ width: "24px" }}>
                   {text === "Dashboard" && (
                     <img src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910171/FlipkartAdmin/dashboard_black_24dp_o3qbb4.svg" />
@@ -117,13 +110,13 @@ export default function Sidenav(props: Props) {
                     <img src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910189/FlipkartAdmin/read_more_black_24dp_fupuhs.svg" />
                   )}
                 </div>
-                {/* </ListItemIcon> */}
+
                 <div className="navBarTitle">{text}</div>
               </div>
             </ListItem>
           ))}
         </List>
-        {/* <Divider /> */}
+
         <List sx={{ width: "100%" }}>
           {subpages[currentPage] &&
             subpages[currentPage].map((subpage, index) => (
@@ -138,7 +131,6 @@ export default function Sidenav(props: Props) {
                 disablePadding
               >
                 <ListItemButton>
-                  {/* Your code for rendering subpage icons or text */}
                   <div>{subpage}</div>
                 </ListItemButton>
               </ListItem>
@@ -151,7 +143,6 @@ export default function Sidenav(props: Props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
-  //appbar
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -179,8 +170,6 @@ export default function Sidenav(props: Props) {
       <AppBar
         position="fixed"
         sx={{
-          // width: { sm: `calc(100% - ${drawerWidth}px)` },
-          // ml: { sm: `${drawerWidth}px` },
           zIndex: "1300",
           backgroundColor: "#FFF",
           borderBottom: "1px solid #DADCE0",
@@ -204,7 +193,7 @@ export default function Sidenav(props: Props) {
             height={"50px"}
           />
           <div>1</div>
-          {/* <ResponsiveAppBar /> */}
+
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -218,50 +207,8 @@ export default function Sidenav(props: Props) {
                 >
                   <MenuIcon />
                 </IconButton>
-                {/* <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorElNav}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "left",
-                  }}
-                  open={Boolean(anchorElNav)}
-                  onClose={handleCloseNavMenu}
-                  sx={{
-                    display: { xs: "block", md: "none" },
-                  }}
-                >
-                  {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page}</Typography>
-                    </MenuItem>
-                  ))}
-                </Menu> */}
               </Box>
-              {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-              {/* <Typography
-                variant="h5"
-                noWrap
-                component="a"
-                href="#app-bar-with-responsive-menu"
-                sx={{
-                  mr: 2,
-                  display: { xs: "flex", md: "none" },
-                  flexGrow: 1,
-                  fontFamily: "monospace",
-                  fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                LOGO
-              </Typography> */}
+
               <Box
                 sx={{
                   flexGrow: 1,
@@ -334,14 +281,13 @@ export default function Sidenav(props: Props) {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
           container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -377,7 +323,6 @@ export default function Sidenav(props: Props) {
           paddingTop: "64px",
         }}
       >
-        {/* <Toolbar /> */}
         {currentSubPage === "Org Setup" && <Home />}
         {currentPage === "About" && <About />}
       </Box>
