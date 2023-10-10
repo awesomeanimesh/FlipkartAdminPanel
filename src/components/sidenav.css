@@ -1,6 +1,7 @@
 .sidenavData {
     display: flex;
     flex-direction: row;
+    /* height: 64px !important;  */
 }
 
 .title {
@@ -47,4 +48,23 @@
     margin-left: .5rem;
     background: #E8F0FD 0% 0% no-repeat padding-box;
     border-radius: 15px 0px 0px 15px;
+}
+
+.cycleDate{
+    font: normal normal normal 14px/18px Open Sans;
+    letter-spacing: 0px;
+color: #5F6368;
+}
+.companyName{
+    font: normal normal medium 16px/20px open Sans;
+letter-spacing: 0px;
+color: #3C4043;
+opacity: 1;
+}
+
+.appBarLogoDetails{
+font: normal normal normal 10px/18px Open Sans;
+letter-spacing: 0.01px;
+color: #5F6368;
+opacity: 1;
 }
