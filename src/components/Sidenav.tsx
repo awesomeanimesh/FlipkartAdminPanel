@@ -51,7 +51,7 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 export default function Sidenav(props: Props) {
   const { window } = props;
   const [currentPage, setCurrentPage] = useState("Super Configuration");
-  const [currentSubPage, setCurrentSubPage] = useState("Supage 1");
+  const [currentSubPage, setCurrentSubPage] = useState("Org Setup");
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
