@@ -37,11 +37,20 @@ interface Props {
     window?: () => Window;
 }
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Dashboard', 'Monthly Process', 'Super Configuration', 'Master Reports', 'More'];
+
+const subpages: { [key: string]: string[] } = {
+    "Dashboard": ["Subpage 1", "Subpage 2"],
+    "Monthly Process": ["Subpage A", "Subpage B"],
+    "Super Configuration": ["Services Offered", "Org Setup"],
+    "Master Reports": ["Subpage I", "Subpage II"],
+    "More": ["Subpage Alpha", "Subpage Beta"],
+};
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 export default function Sidenav(props: Props) {
     const { window } = props;
-    const [currentPage, setCurrentPage] = useState("home");
+    const [currentPage, setCurrentPage] = useState("Super Configuration");
+    const [currentSubPage, setCurrentSubPage] = useState("Supage 1");
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -49,37 +58,58 @@ export default function Sidenav(props: Props) {
     };
     const handleOnClick = (page: string) => {
         setCurrentPage(page);
+        const first = subpages[page][0]
+        setCurrentSubPage(first);
     }
+    const handleSubPageClick = (subpage: string) => {
+        setCurrentSubPage(subpage);
+    };
 
     const drawer = (
         <div>
             <Toolbar />
             <Divider />
-            <List>
-                {['Home', 'About', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} onClick={() => handleOnClick(text)} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
+            <div style={{ display: "flex", flexDirection: "row" }}>
+                <List sx={{ width: `calc( ${drawerWidth / 3}px)`, backgroundColor: "#F7F7F7     " }}>
+                    {pages.map((text, index) => (
+                        <ListItem key={text} className={currentPage === text ? 'activeSideNav' : ''} onClick={() => handleOnClick(text)} disablePadding>
+                            <div style={{ display: "flex", flexDirection: "column", paddingLeft: ".5rem", margin: ".5rem 0rem", cursor: "pointer" }}>
+                                {/* <ListItemIcon> */}
+                                <div style={{ width: "24px" }}>
+                                    {text === "Dashboard" &&
+                                        <img src='https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910171/FlipkartAdmin/dashboard_black_24dp_o3qbb4.svg' />
+                                    }
+                                    {text === "Monthly Process" &&
+                                        <img src='https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910178/FlipkartAdmin/work_history_black_24dp_puvvoz.svg' />
+                                    }
+                                    {text === "Super Configuration" &&
+                                        <img src='https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910182/FlipkartAdmin/tune_black_24dp_yoon12.svg' />
+                                    }
+                                    {text === "Master Reports" &&
+                                        <img src='https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910186/FlipkartAdmin/auto_graph_black_24dp_kisuqv.svg' />
+                                    }
+                                    {text === "More" &&
+                                        <img src='https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910189/FlipkartAdmin/read_more_black_24dp_fupuhs.svg' />
+                                    }
+                                </div>
+                                {/* </ListItemIcon> */}
+                                <div className='navBarTitle'  >{text}</div>
+                            </div>
+                        </ListItem>
+                    ))}
+                </List>
+                {/* <Divider /> */}
+                <List sx={{ width: "100%" }}>
+                    {subpages[currentPage] && subpages[currentPage].map((subpage, index) => (
+                        <ListItem key={subpage} className={currentSubPage === subpage ? 'activeSideNavSub' : 'inActiveSideNavSub'} onClick={() => handleSubPageClick(subpage)} disablePadding>
+                            <ListItemButton>
+                                {/* Your code for rendering subpage icons or text */}
+                                <div>{subpage}</div>
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
+                </List>
+            </div>
         </div>
     );
 
@@ -297,7 +327,7 @@ export default function Sidenav(props: Props) {
                 }}
             >
                 {/* <Toolbar /> */}
-                {currentPage === "Home" && <Home />}
+                {currentSubPage === "Org Setup" && <Home />}
                 {currentPage === "About" && <About />}
             </Box>
         </Box>

@@ -16,3 +16,33 @@
     color: #5F6368;
     font: normal normal normal 12px/18px Open Sans;
 }
+
+.navBarTitle {
+    font: normal normal normal 11px/14px Open Sans;
+    letter-spacing: 0px;
+    color: #616161;
+}
+
+.activeSideNav {
+    border-left: 3px solid #FD9933;
+    background-color: #fff;
+
+}
+
+.inActiveSideNavSub {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    height: 30px;
+    margin-left: .5rem;
+
+}
+
+.activeSideNavSub {
+    font-family: 'Open Sans';
+    font-size: 14px !important;
+    font-weight: bold;
+    height: 30px;
+    margin-left: .5rem;
+    background: #E8F0FD 0% 0% no-repeat padding-box;
+    border-radius: 15px 0px 0px 15px;
+}
