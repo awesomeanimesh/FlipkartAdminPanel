@@ -95,19 +95,34 @@ export default function Sidenav(props: Props) {
               >
                 <div style={{ width: "24px" }}>
                   {text === "Dashboard" && (
-                    <img src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910171/FlipkartAdmin/dashboard_black_24dp_o3qbb4.svg" />
+                    <img
+                      src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910171/FlipkartAdmin/dashboard_black_24dp_o3qbb4.svg"
+                      alt="dash"
+                    />
                   )}
                   {text === "Monthly Process" && (
-                    <img src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910178/FlipkartAdmin/work_history_black_24dp_puvvoz.svg" />
+                    <img
+                      src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910178/FlipkartAdmin/work_history_black_24dp_puvvoz.svg"
+                      alt="monthly"
+                    />
                   )}
                   {text === "Super Configuration" && (
-                    <img src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910182/FlipkartAdmin/tune_black_24dp_yoon12.svg" />
+                    <img
+                      src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910182/FlipkartAdmin/tune_black_24dp_yoon12.svg"
+                      alt="monthly"
+                    />
                   )}
                   {text === "Master Reports" && (
-                    <img src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910186/FlipkartAdmin/auto_graph_black_24dp_kisuqv.svg" />
+                    <img
+                      src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910186/FlipkartAdmin/auto_graph_black_24dp_kisuqv.svg"
+                      alt="masterrports"
+                    />
                   )}
                   {text === "More" && (
-                    <img src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910189/FlipkartAdmin/read_more_black_24dp_fupuhs.svg" />
+                    <img
+                      src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696910189/FlipkartAdmin/read_more_black_24dp_fupuhs.svg"
+                      alt="moreLgo"
+                    />
                   )}
                 </div>
 
@@ -146,6 +161,7 @@ export default function Sidenav(props: Props) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
+  console.log(anchorElNav);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
   );
@@ -160,6 +176,7 @@ export default function Sidenav(props: Props) {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  console.log(handleCloseNavMenu);
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -227,6 +244,7 @@ export default function Sidenav(props: Props) {
                     <img
                       src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696931978/FlipkartAdmin/help_outline-24px_3_xzodzs.svg"
                       width={"24px"}
+                      alt="help"
                     />
                     <div className="appBarLogoDetails">Support</div>
                   </Stack>
@@ -234,6 +252,7 @@ export default function Sidenav(props: Props) {
                     <img
                       src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696932014/FlipkartAdmin/Group_8570_s8ewit.svg"
                       width={"24px"}
+                      alt="Noti"
                     />
                     <div className="appBarLogoDetails">Notifications</div>
                   </Stack>

@@ -1,6 +1,6 @@
 import { Button, Stack } from "@mui/material";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
+
 import React from "react";
 import "./sidenav.css";
 
@@ -15,7 +15,10 @@ function CustomAccordionSummary(props: CustomAccordionSummaryProps) {
   return (
     <AccordionSummary
       expandIcon={
-        <img src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696885524/FlipkartAdmin/Group_10163_si62oj.svg" />
+        <img
+          src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696885524/FlipkartAdmin/Group_10163_si62oj.svg"
+          alt="expandicon"
+        />
       }
       aria-controls="panel1a-content"
       id="panel1a-header"
@@ -46,7 +49,10 @@ function CustomAccordionSummary(props: CustomAccordionSummaryProps) {
               }}
               variant="outlined"
             >
-              <img src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696930111/FlipkartAdmin/upload_black_24dp_ekxeqx.svg" />{" "}
+              <img
+                src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696930111/FlipkartAdmin/upload_black_24dp_ekxeqx.svg"
+                alt="uploadLogo"
+              />{" "}
               Bulk Upload
             </Button>
             <Button
@@ -59,7 +65,10 @@ function CustomAccordionSummary(props: CustomAccordionSummaryProps) {
               }}
               variant="contained"
             >
-              <img src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696930469/FlipkartAdmin/save_black_24dp_nibocj.svg" />{" "}
+              <img
+                src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696930469/FlipkartAdmin/save_black_24dp_nibocj.svg"
+                alt="Save logo"
+              />{" "}
               Save
             </Button>
           </Stack>

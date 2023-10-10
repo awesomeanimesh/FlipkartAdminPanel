@@ -41,10 +41,13 @@ function OrgSetupDetails() {
     useState("");
   const {
     register,
-    formState: { errors, isValid },
+    formState: {
+      errors,
+      // isValid
+    },
     handleSubmit,
     setValue,
-    getValues,
+    // getValues,
   } = useForm<IRegisterForm>({ mode: "onChange" });
 
   const onSubmit: SubmitHandler<IRegisterForm> = (data: IRegisterForm) => {
@@ -69,6 +72,7 @@ function OrgSetupDetails() {
       erpModule: data.erpModule,
       aiFormat: data.aiFormat,
     };
+    console.log(updatedFormData);
   };
 
   const handlenoOfIntegrations = (event: any): any => {
@@ -113,6 +117,7 @@ function OrgSetupDetails() {
                   <img
                     src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696917616/FlipkartAdmin/OracleLogo_szitha.png"
                     width={"100px"}
+                    alt="imageLogo"
                   />
                 </div>
               </div>

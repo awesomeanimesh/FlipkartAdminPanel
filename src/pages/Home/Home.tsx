@@ -2,13 +2,9 @@ import React from "react";
 import "./home.css";
 
 import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import CustomAccordionSummary from "../../components/CustomAccordionSummary";
-import { Stack } from "@mui/material";
 import OrgSetupDetails from "../../components/OrgSetupDetails";
 
 const jsonData = [
@@ -96,6 +92,7 @@ function Home() {
       <img
         src="https://res.cloudinary.com/dyaaypoqk/image/upload/v1696886067/FlipkartAdmin/Group_10166_qwzgis.svg"
         style={{ paddingLeft: "1rem" }}
+        alt="img"
       />
     </div>
   );
